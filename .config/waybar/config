@@ -1,0 +1,78 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height": 20,
+    "spacing": 0,
+    "modules-left": [
+        "custom/weather",
+        "clock",
+        "custom/screen-recorder"
+    ],
+    "modules-center": [
+        "sway/workspaces"
+    ], 
+    "modules-right": [
+        "network",
+        "battery"
+    ],
+    "sway/language": {
+	    "format": "{flag}",
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "all-outputs": true,
+        "disable-scroll": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "battery": {
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% &#xf0e7;",
+        "states": {
+            "critical": 15
+        }
+    },
+    "clock": {
+        "format": "   {:%H:%M:%S    %m/%d}",
+        "interval": 1
+    },
+    "network": {
+        "format": "⚠",
+        "format-wifi": "",
+        "format-disconnected": "⚠",
+        "tooltip": false
+    },
+    "custom/weather": {
+        "format": "{}",
+        "interval": 3600,
+        "exec": "~/.config/waybar/weather.sh",
+        "tooltip": false,
+        "on-click": "xdg-open https://wttr.in/"
+    },
+    "custom/screen-recorder": {
+		"format": "    ",
+		"return-type": "json",
+		"interval": 1,
+		"exec": "echo '{\"class\": \"recording\"}'",
+		"exec-if": "pgrep wf-recorder"
+	}
+}

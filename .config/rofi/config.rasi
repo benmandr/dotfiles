@@ -1,0 +1,70 @@
+configuration {
+	font: "Adobe Source Code Pro 12";
+	show-icons: true;
+	combi-modes: "custom:~/.config/rofi/menu.sh,drun";
+	window-format: "{c}";
+	drun-display-format: "{name}";
+	combi-display-format: "{text}";
+	icon-theme: "Papirus-Dark";
+}
+
+@theme "/dev/null"
+
+* {
+	bg: rgba(28,28,28,0.6);
+	fg: white;
+	text-dark: black;
+    unit: 8px;
+    two-units: 16px;
+	three-units: 24px;
+	button:	white;
+	background-color: @bg;
+	text-color: @fg;
+}
+
+window {
+	border-radius: @radius;
+	width: 30%;
+    border-radius: @unit;
+	location: north;
+	y-offset: 33%;
+}
+
+entry {
+    background-color: transparent;
+	blink: false;
+}
+
+inputbar {
+    padding: @two-units;
+	children: [ entry ];
+    border-color: @fg;
+}
+
+listview {
+	lines: 6;
+	fixed-height: false;
+	cycle: true;
+    border: 1px 0px 0px 0px;
+    border-color: @fg;
+}
+
+element {
+	padding: @unit;
+    background-color: transparent;
+}
+
+element-text, element-icon {
+	margin: @unit;
+	background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+	size: @three-units;
+}
+
+element selected {
+	background-color: @fg;
+	text-color: @text-dark;
+}

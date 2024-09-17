@@ -1,0 +1,36 @@
+* {
+    font-family: Adobe Source Code Pro;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: black;
+}
+
+.modules-right, .modules-left, .modules-center {
+    background-color: black;
+    opacity: 0.7;
+    padding: 2px 16px;
+    border-radius: 50px;
+}
+
+#workspaces button {
+    padding: 2px;
+}
+
+#battery,
+#network,
+#language {
+    padding: 0 10px;
+}
+
+#battery.critical:not(.charging) {
+	color: #8F5656;
+}
+l
+#custom-screen-recorder {
+	color: #FF3B30;
+}
