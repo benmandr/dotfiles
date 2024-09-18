@@ -21,7 +21,9 @@ I'm merely an enthusiast who
 
 ## Description
 Waybar is providing necessary information, which helps daily: temperature, time, date, workspace, network and battery status.
+
 Sway-fx has minimal styling to make the setup more pleasing to the eye, and uses `Super` as a "power" key - it triggers Rofi, and in combination with other keys, opens terminal, switches workspaces, splits views, etc.
+
 Rofi is the center of control. Power actions, screenshots, screen recording, clipboard managenent and (not a perfect one, but does its work) translating.
 
 ## Screenshots
