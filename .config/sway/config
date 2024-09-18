@@ -178,4 +178,8 @@ exec wl-paste --watch cliphist store
 ### Prompt to login upon startup
 exec swaylock
 
+### Autostart applications
+exec swaymsg 'workspace 1; exec obsidian'
+exec swaymsg 'workspace 2; exec firefox'
+
 include /etc/sway/config.d/*

@@ -1,17 +1,17 @@
 #!/bin/bash
-max_retries=3
-retry_count=0
+max_retries=5
+delay=10
 
-until curl --output /dev/null --silent --head --fail "wttr.in/?format=%c%t"; do
-    retry_count=$((retry_count + 1))
+check_connectivity() {
+    ping -q -c 1 -W 1 8.8.8.8 >/dev/null
+    return $?
+}
 
-    if [ $retry_count -ge $max_retries ]; then
-        exit 1
+for ((i=1; i<=max_retries; i++)); do
+    if check_connectivity; then
+        weather=$(curl -s "wttr.in/?format=1")
+        echo ${weather}
+        exit 0
     fi
-
-    sleep 5
+    sleep $delay
 done
-
-weather=$(curl -s "wttr.in/?format=%c%t")
-
-echo ${weather::-1}
