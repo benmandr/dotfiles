@@ -27,4 +27,11 @@ Sway-fx has minimal styling to make the setup more pleasing to the eye, and uses
 Rofi is the center of control. Power actions, screenshots, screen recording, clipboard managenent and (not a perfect one, but does its work) translating.
 
 ## Screenshots
-TODO
+![image](https://github.com/user-attachments/assets/a6849ee7-ecb2-4bd2-b6a5-4bb8b063b568)
+![image](https://github.com/user-attachments/assets/d51e29fa-9867-4a1e-b315-f8ef7aaf1cd2)
+![image](https://github.com/user-attachments/assets/7f03d4ad-6b86-4f33-98a4-9d7a5e046b95)
+
+
+https://github.com/user-attachments/assets/e75830c0-2848-4da4-b31b-f12decff6ab4
+
+
