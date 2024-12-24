@@ -30,4 +30,9 @@ dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic a
 - `swayfx`, `swaylock-effects`, `swayidle` and similar provide the base functionalities I require from a window manager, while still keeping a simple, neat, yet aesthetic look. Config also has shortcuts adjust to have `Super` as a "power" key - it triggers Rofi, and in combination with other keys, opens terminal, switches workspaces, splits views, etc. 
 
 ## Screenshots
-Test two way sync
+![image](https://github.com/user-attachments/assets/3a7dfd7d-aefb-4497-9549-0f6baf724157)
+![image](https://github.com/user-attachments/assets/808d44e0-bdd5-4db8-b301-cc5fe4825661)
+![image](https://github.com/user-attachments/assets/b7d54ed3-cbf1-456b-a408-480e7ffa9bac)
+![image](https://github.com/user-attachments/assets/abf9e61c-3126-46e7-a08a-380018519537)
+
+
