@@ -9,7 +9,7 @@ check_connectivity() {
 
 for ((i=1; i<=max_retries; i++)); do
     if check_connectivity; then
-        weather=$(curl -s "wttr.in/?format=1")
+        weather=$(curl -s "wttr.in/Kaunas?format=1&m")
         echo ${weather}
         exit 0
     fi

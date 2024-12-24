@@ -1,9 +1,9 @@
-### Variables
 set $mod Mod4
+### Variables
 set $term kitty
 set $menu rofi -show combi || pkill rofi
 
-### Wallpaper
+### Display
 output * bg /usr/share/backgrounds/sway/desktop.jpg fill
 
 ### Idle configuration
@@ -16,7 +16,7 @@ exec swayidle -w \
 input "type:keyboard" {
   xkb_layout lt
   xkb_variant us
-  xkb_options lv3:caps_switch
+  xkb_options lv3:caps_switch_capslock_with_ctrl
 }
 
 input "type:touchpad" {
@@ -27,6 +27,7 @@ input "type:touchpad" {
 ### Key bindings
 # Start a terminal
 bindsym $mod+t exec $term
+bindsym $mod+b exec zen-browser
 
 # Kill focused window
 bindsym $mod+q kill
@@ -129,11 +130,11 @@ bindsym $mod+r mode "resize"
 
 # Media controls
 bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
-bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume 10
-bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -10
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume 5
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -5
 bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
-bindsym XF86MonBrightnessUp exec swayosd-client --brightness +10
-bindsym XF86MonBrightnessDown exec swayosd-client --brightness -10
+bindsym XF86MonBrightnessUp exec swayosd-client --brightness +5
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness -5
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -147,6 +148,11 @@ bar {
 ### Sway configuration
 gaps inner 10
 default_border none
+client.focused #000000 #1d1f21 #ffffff #000000
+client.unfocused #000000 #1d1f21 #d8dee9 #000000
+
+### Handle picture in picture mode
+for_window [title="Picture-in-Picture"] floating enable, sticky enable, resize set 285 160, move position 1615 861
 
 ### SwayFx
 smart_corner_radius enable
@@ -154,20 +160,14 @@ corner_radius 15
 shadows enable
 shadows_on_csd enable
 shadow_blur_radius 20
-default_dim_inactive 0.20
+default_dim_inactive 0.10
 blur enable
 blur_xray disable
 blur_passes 4
 blur_radius 4
-set $opacity 0.85
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
-
-### Focused window history tracking
-exec --no-startup-id ~/.config/sway/track-most-recently-focused-window-id.sh
 
 ### Stop playerctl once BT device is disconnected
-exec --no-startup-id ~/.config/stop_playerctl_on_bt_disconnect.sh
+### exec --no-startup-id ~/.config/stop_playerctl_on_bt_disconnect.sh
 
 ### Enable OSD
 exec swayosd-server
@@ -178,8 +178,16 @@ exec wl-paste --watch cliphist store
 ### Prompt to login upon startup
 exec swaylock
 
+### Enable notifications
+exec mako
+
+### Start VPN
+exec nordvpn c
+
+### Enable power alerts
+exec poweralertd -s -i "line power"
+
 ### Autostart applications
-exec swaymsg 'workspace 1; exec obsidian'
-exec swaymsg 'workspace 2; exec firefox'
+exec swaymsg "exec zen-browser"
 
 include /etc/sway/config.d/*

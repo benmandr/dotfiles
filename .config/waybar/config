@@ -13,66 +13,75 @@
     ],
     "modules-center": [
         "sway/workspaces"
-    ], 
+    ],
     "modules-right": [
         "network",
-        "battery"
+        "bluetooth",
+        "battery",
+        "cpu",
+        "memory"
     ],
-    "sway/language": {
-	    "format": "{flag}",
-        "tooltip": false
-    },
     "sway/workspaces": {
         "all-outputs": true,
-        "disable-scroll": true,
         "format": "{icon}",
+        "disable-scroll": true,
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
+            "default": "",
             "focused": "",
-            "default": ""
+            "urgent": ""
         },
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "1": [],
             "2": [],
-            "3": [],
-            "4": [],
-            "5": []
+            "3": []
         }
     },
     "battery": {
-        "format": "{capacity}%",
-        "format-charging": "{capacity}% &#xf0e7;",
+        "format": "&#xf0079;  {capacity}%",
+        "format-charging": "&#xf0084;  {capacity}%",
         "states": {
             "critical": 15
-        }
+        },
+        "interval": 5
+    },
+    "cpu": {
+        "format": " &#xf4bc;   {usage}%",
+        "interval": 5
+    },
+    "memory": {
+        "format": "  &#xefc5;    {percentage}%",
+        "interval": 5
     },
     "clock": {
         "format": "   {:%H:%M:%S    %m/%d}",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false
     },
     "network": {
         "format": "⚠",
         "format-wifi": "",
         "format-disconnected": "⚠",
-        "tooltip": false
+        "tooltip-format": "{essid}"
+    },
+    "bluetooth": {
+        "format": "    ",
+        "format-connected": "    ",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t 󰁹  {device_battery_percentage}%",
+        "on-click": "exec blueman-manager"
     },
     "custom/weather": {
         "format": "{}",
         "interval": 3600,
         "exec": "~/.config/waybar/weather.sh",
         "tooltip": false,
-        "on-click": "xdg-open https://wttr.in/"
+        "on-click": "xdg-open https://wttr.in/Kaunas?m"
     },
     "custom/screen-recorder": {
-		"format": "    ",
-		"return-type": "json",
-		"interval": 1,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder"
-	}
+        "format": "    ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder"
+    }
 }

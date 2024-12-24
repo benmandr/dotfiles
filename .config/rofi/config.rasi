@@ -12,8 +12,7 @@ configuration {
 
 * {
 	bg: rgba(28,28,28,0.6);
-	fg: white;
-	text-dark: black;
+	fg: #ffc799;
     unit: 8px;
     two-units: 16px;
 	three-units: 24px;
@@ -66,5 +65,5 @@ element-icon {
 
 element selected {
 	background-color: @fg;
-	text-color: @text-dark;
+	text-color: black;
 }

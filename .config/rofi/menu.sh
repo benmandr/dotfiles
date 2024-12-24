@@ -4,17 +4,18 @@ TRANSLATE="Translate"
 CALCULATOR="Calculator"
 LOCK="Lock"
 SLEEP="Sleep"
-SCREENSHOT="Screenshot"
 REBOOT="Reboot"
 SHUTDOWN="Shutdown"
 CLIPBOARD="Clipboard"
+MIRROR="Mirror"
+SCREENSHOT="Screenshot"
 START_SCREEN_RECORDING="Start recording"
 START_SCREEN_RECORDING_AREA="Start recording (area)"
 STOP_SCREEN_RECORDING="Stop recording"
 
 case $ROFI_RETV in
     0 )
-        echo -e "$WIFI\0icon\x1fwifi-radar\n"
+        echo -e "$WIFI\0icon\x1fwifi-radar"
         echo -e "$TRANSLATE\0icon\x1fgoogle-translate"
         echo -e "$CALCULATOR\0icon\x1fcalc"
         echo -e "$LOCK\0icon\x1flock"
@@ -50,6 +51,8 @@ case $ROFI_RETV in
         elif [[ "$1" = "$SCREENSHOT" ]]; then
             pkill -x rofi
             grim -g "$(slurp)" - | swappy -f -
+        elif [[ "$1" = "$MIRROR" ]]; then
+            coproc bash ~/.config/rofi/mirror.sh
         elif [[ "$1" = "$START_SCREEN_RECORDING" ]]; then
             pkill -x rofi
             nohup wf-recorder -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") > /dev/null 2>&1 &
