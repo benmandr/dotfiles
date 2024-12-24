@@ -1,3 +1,4 @@
+
 # benmandr's dotfiles
 dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic as possible, but without sacrificing aesthetics. I'm merely an enthusiast.
 
@@ -21,6 +22,7 @@ dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic a
 - [mako](https://github.com/emersion/mako) notification daemon
 - [NordVPN](https://aur.archlinux.org/packages/nordvpn) as VPN
 - [nemo](https://github.com/linuxmint/nemo) file manager
+- [darkman](https://man.archlinux.org/man/darkman.1.en) to manage current system theme
 
 ## Description
 - `Waybar` provides necessary info - weather, time, date, workspace, Wifi/Bluetooth status, battery level, RAM/CPU usage.
@@ -28,5 +30,3 @@ dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic a
 - `swayfx`, `swaylock-effects`, `swayidle` and similar provide the base functionalities I require from a window manager, while still keeping a simple, neat, yet aesthetic look. Config also has shortcuts adjust to have `Super` as a "power" key - it triggers Rofi, and in combination with other keys, opens terminal, switches workspaces, splits views, etc. 
 
 ## Screenshots
-
-TODO: issiaiskint su tuo config status.
