@@ -12,6 +12,8 @@
         "custom/waybar-media",
         "custom/cava",
         "custom/media",
+        "custom/media-previous",
+        "custom/media-play-pause",
         "custom/media-next",
         "custom/screen-recorder"
     ],
@@ -100,16 +102,34 @@
         "exec": "~/.config/waybar/media.sh",
         "interval": 1,
         "limit": 60,
+        "tooltip": false,
         "on-click": "playerctl play-pause"
     },
-    "custom/media-next": {
-        "format": "{}",
-        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
+    "custom/media-play-pause": {
+        "format": "   {}",
+        "exec": "~/.config/waybar/media-play-pause.sh",
         "interval": 1,
+        "limit": 60,
+        "tooltip": false,
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-previous": {
+        "format": "  {}",
+        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
+        "interval": 1,
+        "tooltip": false,
+        "on-click": "playerctl previous"
+    },
+    "custom/media-next": {
+        "format": "  {}",
+        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
+        "interval": 1,
+        "tooltip": false,
         "on-click": "playerctl next"
     },
     "custom/cava": {
         "format": "    {}",
-        "exec": "~/.config/waybar/cava.sh"
+        "exec": "~/.config/waybar/cava.sh",
+        "tooltip": false
     }
 }
