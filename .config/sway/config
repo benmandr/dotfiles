@@ -182,7 +182,7 @@ exec swaylock
 exec mako
 
 ### Start VPN
-exec nordvpn c
+exec nordvpn c lithuania
 
 ### Enable power alerts
 exec poweralertd -s -i "line power"

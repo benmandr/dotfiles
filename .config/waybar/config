@@ -9,6 +9,10 @@
     "modules-left": [
         "custom/weather",
         "clock",
+        "custom/waybar-media",
+        "custom/cava",
+        "custom/media",
+        "custom/media-next",
         "custom/screen-recorder"
     ],
     "modules-center": [
@@ -16,6 +20,7 @@
     ],
     "modules-right": [
         "network",
+        "custom/vpn",
         "bluetooth",
         "battery",
         "cpu",
@@ -83,5 +88,28 @@
         "interval": 1,
         "exec": "echo '{\"class\": \"recording\"}'",
         "exec-if": "pgrep wf-recorder"
+    },
+    "custom/vpn": {
+        "format": "{}",
+        "interval": 1800,
+        "exec": "~/.config/waybar/vpn.sh",
+        "tooltip-format": "VPN Connected"
+    },
+    "custom/media": {
+        "format": "{}",
+        "exec": "~/.config/waybar/media.sh",
+        "interval": 1,
+        "limit": 60,
+        "on-click": "playerctl play-pause"
+    },
+    "custom/media-next": {
+        "format": "{}",
+        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
+        "interval": 1,
+        "on-click": "playerctl next"
+    },
+    "custom/cava": {
+        "format": "    {}",
+        "exec": "~/.config/waybar/cava.sh"
     }
 }
