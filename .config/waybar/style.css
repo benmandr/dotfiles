@@ -29,6 +29,22 @@ window#waybar {
     color: #8F5656;
 }
 
-l #custom-screen-recorder {
+#custom-screen-recorder {
     color: #FF3B30;
+}
+
+#custom-vpn.disconnected {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#custom-cpu.warning {
+    color: #f38ba8;
+}
+
+#memory.warning {
+    color: #f38ba8;
+}
+
+tooltip {
+    background: rgba(80, 80, 80, 0.95);
 }

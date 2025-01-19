@@ -10,10 +10,9 @@
         "custom/weather",
         "clock",
         "custom/waybar-media",
+        "custom/media-previous",
         "custom/cava",
         "custom/media",
-        "custom/media-previous",
-        "custom/media-play-pause",
         "custom/media-next",
         "custom/screen-recorder"
     ],
@@ -25,7 +24,7 @@
         "custom/vpn",
         "bluetooth",
         "battery",
-        "cpu",
+        "custom/cpu",
         "memory"
     ],
     "sway/workspaces": {
@@ -36,11 +35,6 @@
             "default": "",
             "focused": "",
             "urgent": ""
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": []
         }
     },
     "battery": {
@@ -51,13 +45,12 @@
         },
         "interval": 5
     },
-    "cpu": {
-        "format": " &#xf4bc;   {usage}%",
-        "interval": 5
-    },
     "memory": {
         "format": "  &#xefc5;    {percentage}%",
-        "interval": 5
+        "interval": 5,
+        "states": {
+            "warning": 80
+        }
     },
     "clock": {
         "format": "   {:%H:%M:%S    %m/%d}",
@@ -73,9 +66,17 @@
     "bluetooth": {
         "format": "    ",
         "format-connected": "    ",
+        "tooltip-format": "No connections",
         "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t 󰁹  {device_battery_percentage}%",
         "on-click": "exec blueman-manager"
+    },
+    "custom/cpu": {
+        "format": " &#xf4bc;   {}",
+        "interval": 1,
+        "exec": "~/.config/waybar/cpu.sh",
+        "return-type": "json",
+        "tooltip": true
     },
     "custom/weather": {
         "format": "{}",
@@ -93,43 +94,36 @@
     },
     "custom/vpn": {
         "format": "{}",
+        "return-type": "json",
         "interval": 1800,
         "exec": "~/.config/waybar/vpn.sh",
-        "tooltip-format": "VPN Connected"
+        "on-click": "~/.config/waybar/vpn-toggle.sh",
+        "tooltip": true,
+        "signal": 8
     },
     "custom/media": {
-        "format": "{}",
-        "exec": "~/.config/waybar/media.sh",
-        "interval": 1,
-        "limit": 60,
-        "tooltip": false,
-        "on-click": "playerctl play-pause"
-    },
-    "custom/media-play-pause": {
         "format": "   {}",
-        "exec": "~/.config/waybar/media-play-pause.sh",
+        "exec": "playerctl metadata --format '{{artist}} - {{title}}'",
         "interval": 1,
         "limit": 60,
         "tooltip": false,
-        "on-click": "playerctl play-pause"
+        "on-click": "swaymsg [app_id='zen-beta'] focus && wtype -M alt -M shift a"
     },
     "custom/media-previous": {
-        "format": "  {}",
-        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
-        "interval": 1,
+        "format": "  ",
         "tooltip": false,
         "on-click": "playerctl previous"
     },
     "custom/media-next": {
-        "format": "  {}",
-        "exec": "playerctl status | grep -qE 'Playing|Paused' && echo -e ' ' || echo ''",
-        "interval": 1,
+        "format": "   ",
         "tooltip": false,
         "on-click": "playerctl next"
     },
     "custom/cava": {
-        "format": "    {}",
+        "format": "  {}",
         "exec": "~/.config/waybar/cava.sh",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "playerctl play-pause",
+        "restart-interval": 0
     }
 }
