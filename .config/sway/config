@@ -168,6 +168,7 @@ blur_radius 4
 
 ### Enable OSD
 exec swayosd-server
+# bindsym --release Caps_Lock exec swayosd-client --caps-lock
 
 ### Enable clipboard manager
 exec wl-paste --watch cliphist store
@@ -185,6 +186,6 @@ exec nordvpn c lithuania
 exec poweralertd -s -i "line power"
 
 ### Autostart applications
-exec swaymsg "exec zen-browser"
+exec swaymsg 'exec zen-browser'
 
 include /etc/sway/config.d/*
