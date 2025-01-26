@@ -16,7 +16,7 @@ dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic a
   - [cliphist](https://github.com/sentriz/cliphist) clipboard manager
   - [slurp](https://github.com/emersion/slurp) + [swappy](https://github.com/jtheoof/swappy) as screenshot tool
   - [slurp](https://github.com/emersion/slurp) + [wf-recorder](https://github.com/ammen99/wf-recorder) as screen recording tool
-- [vscodium](https://vscodium.com/) text editor
+- [Windsurf](https://codeium.com/windsurf) text editor
 - [Zen](https://zen-browser.app/) browser
 - [poweralertd](https://sr.ht/~kennylevinsen/poweralertd/) power notifications
 - [mako](https://github.com/emersion/mako) notification daemon
@@ -30,7 +30,7 @@ dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic a
 - `swayfx`, `swaylock-effects`, `swayidle` and similar provide the base functionalities I require from a window manager, while still keeping a simple, neat, yet aesthetic look. Config also has shortcuts adjust to have `Super` as a "power" key - it triggers Rofi, and in combination with other keys, opens terminal, switches workspaces, splits views, etc. 
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/3a7dfd7d-aefb-4497-9549-0f6baf724157)
+![image](https://github.com/user-attachments/assets/283171a9-e514-47fc-8d45-1553547595fe)
 ![image](https://github.com/user-attachments/assets/808d44e0-bdd5-4db8-b301-cc5fe4825661)
 ![image](https://github.com/user-attachments/assets/b7d54ed3-cbf1-456b-a408-480e7ffa9bac)
 ![image](https://github.com/user-attachments/assets/abf9e61c-3126-46e7-a08a-380018519537)
