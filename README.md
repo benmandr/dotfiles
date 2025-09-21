@@ -1,35 +1,33 @@
 
 # benmandr's dotfiles
-dotfiles of my personal Arch Linux setup. I try to keep things as minimalistic as possible, but without sacrificing aesthetics. I'm merely an enthusiast.
+my arch setup.
 
-## Setup
-- [CachyOS](https://cachyos.org/) Linux distro (based on Arch)
-- [SwayFX](https://github.com/WillPower3309/swayfx) window manager
+## setup
+- [CachyOS](https://cachyos.org/) distro (arch)
+- [SwayFX](https://github.com/WillPower3309/swayx) window manager
 - [swaylock-effects](https://github.com/mortie/swaylock-effects) lockscreen
 - [swayidle](https://github.com/swaywm/swayidle) idle manager
-- [SwayOSD](https://github.com/ErikReider/SwayOSD) daemon notifications (brigthness & volume)
+- [SwayOSD](https://github.com/ErikReider/SwayOSD) daemon notifications (brightness & volume)
 - [Waybar](https://github.com/Alexays/Waybar) bar module
 - [Kitty](https://sw.kovidgoyal.net/kitty/) terminal emulator
 - [Fish](https://fishshell.com/) shell
 - [rofi-wayland](https://github.com/A417ya/rofi-wayland) as command bar
   - [rofi-calc](https://github.com/svenstaro/rofi-calc) calculator
   - [cliphist](https://github.com/sentriz/cliphist) clipboard manager
-  - [slurp](https://github.com/emersion/slurp) + [swappy](https://github.com/jtheoof/swappy) as screenshot tool
-  - [slurp](https://github.com/emersion/slurp) + [wf-recorder](https://github.com/ammen99/wf-recorder) as screen recording tool
-- [Windsurf](https://codeium.com/windsurf) text editor
+  - [slurp](https://github.com/emersion/slurp) + [swappy](https://github.com/jtheoof/swappy) for screenshot
+  - [slurp](https://github.com/emersion/slurp) + [wf-recorder](https://github.com/ammen99/wf-recorder) for screen recording
+- [lazyvim](https://www.lazyvim.org/) text editor
 - [Zen](https://zen-browser.app/) browser
 - [poweralertd](https://sr.ht/~kennylevinsen/poweralertd/) power notifications
 - [mako](https://github.com/emersion/mako) notification daemon
-- [NordVPN](https://aur.archlinux.org/packages/nordvpn) as VPN
+- [NordVPN](https://aur.archlinux.org/packages/nordvpn)
 - [nemo](https://github.com/linuxmint/nemo) file manager
 - [darkman](https://man.archlinux.org/man/darkman.1.en) to manage current system theme
 
-## Description
-- `Waybar` provides necessary info - weather, time, date, workspace, Wifi/Bluetooth status, battery level, RAM/CPU usage.
-- `Rofi` is the center of control. Power actions, screenshots, screen recording, clipboard managenent, calculator, and similar.
-- `swayfx`, `swaylock-effects`, `swayidle` and similar provide the base functionalities I require from a window manager, while still keeping a simple, neat, yet aesthetic look. Config also has shortcuts adjust to have `Super` as a "power" key - it triggers Rofi, and in combination with other keys, opens terminal, switches workspaces, splits views, etc. 
+## description
+shortcuts adjusted to have `Super` as a "power" key - it triggers Rofi, and in combinations opens terminal, switches workspaces, splits views, etc.
 
-## Screenshots
+## screenshots
 ![image](https://github.com/user-attachments/assets/283171a9-e514-47fc-8d45-1553547595fe)
 ![image](https://github.com/user-attachments/assets/808d44e0-bdd5-4db8-b301-cc5fe4825661)
 ![image](https://github.com/user-attachments/assets/b7d54ed3-cbf1-456b-a408-480e7ffa9bac)
