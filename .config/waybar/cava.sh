@@ -1,4 +1,26 @@
 #! /bin/bash
+
+# Simple cleanup
+trap 'pkill -P $$; exit 0' EXIT TERM INT
+
+# Create a basic config
+cat > /tmp/cava_config << EOF
+[general]
+bars = 9
+framerate = 60
+
+[input]
+method = pulse
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7
+channels = mono
+EOF
+
+# Define the bar characters
 bar="▁▂▃▄▅▆▇█"
 dict="s/;//g;"
 
@@ -10,20 +32,7 @@ do
     i=$((i=i+1))
 done
 
-# write cava config
-config_file="/tmp/polybar_cava_config"
-echo "
-[general]
-bars = 9
-
-[output]
-method = raw
-raw_target = /dev/stdout
-data_format = ascii
-ascii_max_range = 7
-" > $config_file
-
-# read stdout from cava
-cava -p $config_file | while read -r line; do
-    echo $line | sed $dict
+# Run cava and transform output
+cava -p /tmp/cava_config | while read -r line; do
+    echo "$line" | sed "$dict"
 done

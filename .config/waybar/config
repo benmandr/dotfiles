@@ -8,24 +8,23 @@
     "spacing": 0,
     "modules-left": [
         "custom/weather",
-        "clock",
+        "battery",
+        "custom/cpu",
         "custom/waybar-media",
         "custom/media-previous",
         "custom/cava",
-        "custom/media",
         "custom/media-next",
-        "custom/screen-recorder"
+        "custom/media"
     ],
     "modules-center": [
+        "custom/screen-recorder",
         "sway/workspaces"
     ],
     "modules-right": [
         "network",
         "custom/vpn",
         "bluetooth",
-        "battery",
-        "custom/cpu",
-        "memory"
+        "clock"
     ],
     "sway/workspaces": {
         "all-outputs": true,
@@ -53,7 +52,7 @@
         }
     },
     "clock": {
-        "format": "   {:%H:%M:%S    %m/%d}",
+        "format": "    {:%H:%M:%S     %m/%d}",
         "interval": 1,
         "tooltip": false
     },
@@ -88,9 +87,9 @@
     "custom/screen-recorder": {
         "format": "    ",
         "return-type": "json",
-        "interval": 1,
+        "interval": 5,
         "exec": "echo '{\"class\": \"recording\"}'",
-        "exec-if": "pgrep wf-recorder"
+        "exec-if": "pgrep -x wf-recorder"
     },
     "custom/vpn": {
         "format": "{}",
@@ -123,7 +122,6 @@
         "format": "  {}",
         "exec": "~/.config/waybar/cava.sh",
         "tooltip": false,
-        "on-click": "playerctl play-pause",
-        "restart-interval": 0
+        "on-click": "playerctl play-pause"
     }
 }

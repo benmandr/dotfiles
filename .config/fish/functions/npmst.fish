@@ -1,4 +1,4 @@
-function npmst --wraps='npm run dev' --wraps='pnpm run dev' --description 'alias npmst=pnpm run dev'
-  pnpm run dev $argv
+function npmst --wraps='npm run start' --description 'alias npmst=npm run start'
+  npm run start $argv
         
 end

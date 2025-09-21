@@ -1,18 +1,9 @@
 set $mod Mod4
-### Variables
 set $term kitty
 set $menu rofi -show combi || pkill rofi
 
-### Display
 output * bg /usr/share/backgrounds/sway/desktop.jpg fill
 
-### Idle configuration
-exec swayidle -w \
-    timeout 600 'swaylock' \
-    timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    timeout 1000 'systemctl suspend' before-sleep 'swaylock'
-
-### Input configuration
 input "type:keyboard" {
   xkb_layout lt
   xkb_variant us
@@ -24,30 +15,14 @@ input "type:touchpad" {
     tap enabled
 }
 
-### Key bindings
-# Start a terminal
 bindsym $mod+t exec $term
 bindsym $mod+b exec zen-browser
+bindsym $mod+shift+o exec swaymsg [class="obsidian"] focus && xdg-open "obsidian://adv-uri?vault=benmandr&commandid=quickadd%3Achoice%3Ad3b3da5e-e171-4ed3-b936-a5718b7aab48"
+bindsym $mod+l exec swaylock -f && sleep 2 && systemctl suspend
 
-# Kill focused window
 bindsym $mod+q kill
-
-# Lock
-bindsym $mod+l exec swaylock
-
-# Start your launcher
 bindsym --release Super_L exec $menu
-
-# Window switcher
-bindsym Mod4+Tab exec ~/.config/sway/alt-tab.sh
-
-# Drag windows
-floating_modifier $mod normal
-
-# Reload the configuration file
 bindsym $mod+Shift+c reload
-
-# Exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 # Moving around:
@@ -129,8 +104,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Media controls
-bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
-bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume 5
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume +5
 bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -5
 bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 bindsym XF86MonBrightnessUp exec swayosd-client --brightness +5
@@ -156,7 +130,7 @@ for_window [title="Picture-in-Picture"] floating enable, sticky enable, resize s
 
 ### SwayFx
 smart_corner_radius enable
-corner_radius 15
+corner_radius 8
 shadows enable
 shadows_on_csd enable
 shadow_blur_radius 20
@@ -166,26 +140,15 @@ blur_xray disable
 blur_passes 4
 blur_radius 4
 
-### Enable OSD
-exec swayosd-server
-# bindsym --release Caps_Lock exec swayosd-client --caps-lock
-
-### Enable clipboard manager
-exec wl-paste --watch cliphist store
-
-### Prompt to login upon startup
 exec swaylock
-
-### Enable notifications
+exec swayidle -w timeout 300 'swaylock -f -c 000000' resume 'swaymsg "output * power on"' before-sleep 'swaylock -f -c 000000'
+exec swayosd-server
+exec sway-audio-idle-inhibit
+exec wl-paste --watch cliphist store
 exec mako
-
-### Start VPN
-exec nordvpn c lithuania
-
-### Enable power alerts
+exec nordvpn c Lithuania
 exec poweralertd -s -i "line power"
-
-### Autostart applications
-exec swaymsg 'exec zen-browser'
+exec ~/.config/sway/scripts/startup.sh
 
 include /etc/sway/config.d/*
+set $mod Mod4
