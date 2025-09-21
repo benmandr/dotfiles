@@ -28,9 +28,9 @@ my arch setup.
 shortcuts adjusted to have `Super` as a "power" key - it triggers Rofi, and in combinations opens terminal, switches workspaces, splits views, etc.
 
 ## screenshots
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/ac9f2571-e169-4f87-945f-dc4c7256a0e8" />![image](https://github.com/user-attachments/assets/abf9e61c-3126-46e7-a08a-380018519537)
 ![image](https://github.com/user-attachments/assets/283171a9-e514-47fc-8d45-1553547595fe)
 ![image](https://github.com/user-attachments/assets/808d44e0-bdd5-4db8-b301-cc5fe4825661)
-![image](https://github.com/user-attachments/assets/b7d54ed3-cbf1-456b-a408-480e7ffa9bac)
 ![image](https://github.com/user-attachments/assets/abf9e61c-3126-46e7-a08a-380018519537)
 
 
