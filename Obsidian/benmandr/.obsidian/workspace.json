@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "2cbf1c169e073b24",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b8f6871bcbfb08e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a9bb9e519e51386",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/watching.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "watching"
+            }
+          },
+          {
+            "id": "5b4f531467c3180f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/S77.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "S77"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2af3dee17a4af07f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e4cae35f1294fd1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db4b3b2bc180736d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8bdafc255bc457c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8f460c966daad496",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fc851a45b606ebc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8dcafc4157295b7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "478c009660393e1b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "inbox.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for inbox"
+            }
+          },
+          {
+            "id": "37624be57819ded0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Main note.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Main note"
+            }
+          },
+          {
+            "id": "176922383c8f1e9b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "8b11c363ead8319e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "gtd/inbox.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of inbox"
+            }
+          },
+          {
+            "id": "fe6b9189c4f8df16",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GTD.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "GTD"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 472.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "pomodoro-timer:Toggle timer panel": false
+    }
+  },
+  "active": "fe6b9189c4f8df16",
+  "lastOpenFiles": [
+    "projects/S77.md",
+    "journal/2025-09-21.md",
+    "projects/watching.md",
+    "projects/Physical health.md",
+    "GTD.md",
+    "projects/Mental health.md",
+    "projects/NT.md",
+    "projects/neovim.md",
+    "projects/Looks.md",
+    "projects/FIRE.md",
+    "projects/reading.md",
+    "projects/Plays.md",
+    "projects/NTSearcher.md",
+    "projects/personal blog.md",
+    "projects/Event searcher.md",
+    "projects/hobbie ideas.md",
+    "_templates/project.md",
+    "_templates/basic.md",
+    "_templates/<% tp.file.title %>.md",
+    "daily note/2025-09-20.md",
+    "2025-09-20.md",
+    "journal/2025-08-23.md",
+    "daily note",
+    "journal/2025-09-20.md",
+    "journal/2025-08-31.md",
+    "journal/2025-08-24.md",
+    "journal/2025-06-15.md",
+    "Excalidraw",
+    "projects/PrimeRentals",
+    "projects/NTSeracheris",
+    "ticktick-backup-2025728214444.csv",
+    "ticktick-backup-2025728194928.csv",
+    "ticktick-backup-2025720135615.csv",
+    "ticktick-backup-2025619203856.csv",
+    "ticktick-backup-2025619203813.csv",
+    "ticktick-backup-202561920343.csv"
+  ]
+}

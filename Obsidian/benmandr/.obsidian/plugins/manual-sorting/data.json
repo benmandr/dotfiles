@@ -1,0 +1,58 @@
+{
+  "customFileOrder": {
+    "/": [
+      "Excalidraw",
+      "_templates",
+      "daily note",
+      "journal",
+      "projects",
+      "zettel",
+      "GTD.md",
+      "ticktick-backup-202561920343.csv",
+      "ticktick-backup-2025619203813.csv",
+      "ticktick-backup-2025619203856.csv",
+      "ticktick-backup-2025720135615.csv",
+      "ticktick-backup-2025728194928.csv",
+      "ticktick-backup-2025728214444.csv"
+    ],
+    "_templates": [
+      "_templates/<% tp.file.title %>.md",
+      "_templates/basic.md",
+      "_templates/project.md"
+    ],
+    "daily note": [],
+    "Excalidraw": [],
+    "journal": [
+      "journal/2025-08-23.md",
+      "journal/2025-06-15.md",
+      "journal/2025-06-18.md",
+      "journal/2025-06-25.md",
+      "journal/2025-06-30.md",
+      "journal/2025-07-20.md",
+      "journal/2025-08-03.md",
+      "journal/2025-08-09.md"
+    ],
+    "projects": [
+      "projects/S77.md",
+      "projects/Physical health.md",
+      "projects/Mental health.md",
+      "projects/NT.md",
+      "projects/neovim.md",
+      "projects/FIRE.md",
+      "projects/Looks.md",
+      "projects/reading.md",
+      "projects/watching.md",
+      "projects/Plays.md",
+      "projects/NTSearcher.md",
+      "projects/personal blog.md",
+      "projects/Event searcher.md",
+      "projects/hobbie ideas.md"
+    ],
+    "zettel": [
+      "zettel/twilio recovery.md",
+      "zettel/Garticphone.md"
+    ]
+  },
+  "draggingEnabled": true,
+  "selectedSortOrder": "manual-sorting"
+}
