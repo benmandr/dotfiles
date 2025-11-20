@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export QT_QPA_PLATFORM:wayland
+SETUVAR --export SSH_AGENT_PID:1379433
+SETUVAR --export SSH_AUTH_SOCK:/home/ben/\x2essh/agent/s\x2ec989cZ1nYq\x2eagent\x2eQvLuLcXxs9
 SETUVAR --export XDG_CURRENT_DESKTOP:sway
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
